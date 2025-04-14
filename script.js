@@ -12,3 +12,9 @@ function getValidInput() {
 
     return Number(input);
 }
+
+function clearContainer(container) {
+    if (container.hasChildNodes()) {
+        container.replaceChildren();
+    }
+}
