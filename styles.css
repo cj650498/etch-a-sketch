@@ -1,0 +1,18 @@
+.set-squares-btn {
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: var(--size);
+    height: var(--size);
+    background-color: lightgray;
+    box-sizing: border-box;
+    /* outline: 1px solid black; */
+  }
