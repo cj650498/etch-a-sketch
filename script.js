@@ -18,3 +18,14 @@ function clearContainer(container) {
         container.replaceChildren();
     }
 }
+
+function getSquareSize(container, squaresPerSide) {
+    return container.offsetWidth / squaresPerSide;
+}
+
+function createSquare(size) {
+    const square = document.createElement("div");
+    square.style.setProperty('--size', `${size}px`);
+    square.classList.add("square");
+    return square;
+}
