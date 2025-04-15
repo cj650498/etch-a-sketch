@@ -20,11 +20,15 @@ setSquaresBtn.addEventListener("click", () => {
     generateSquares(getValidInput());
 });
 
+clearBtn.addEventListener("click", () => {
+    clearColor(container);
+});
+
 function getValidInput() {
     let input;
 
     do {
-        input = prompt("Enter how many squares per side:");
+        input = prompt("Enter how many squares per side (max 100):");
     } while (
         input === null ||
         input.trim() === "" ||
@@ -52,10 +56,6 @@ function createSquare(size) {
     square.classList.add("square");
     return square;
 }
-
-clearBtn.addEventListener("click", () => {
-    clearColor(container);
-});
 
 function clearColor(container) {
     for (let i = 0; i < container.children.length; ++i) {
