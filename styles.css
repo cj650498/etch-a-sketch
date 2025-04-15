@@ -12,7 +12,7 @@
 .square {
     width: var(--size);
     height: var(--size);
-    background-color: lightgray;
+    background-color: var(--bgColor);
     box-sizing: border-box;
-    /* outline: 1px solid black; */
+    outline: 1px solid lightgray;
   }
