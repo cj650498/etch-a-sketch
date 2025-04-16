@@ -12,6 +12,7 @@ const MIN_GRID_SIZE = 1;
 const setGridSizeBtn = document.querySelector(".set-grid-size-btn");
 const resetColorsBtn = document.querySelector(".reset-colors-btn");
 
+// Set grid to initial size
 window.onload = () => {
     setGridSize(INITIAL_GRID_SIZE);
 };
