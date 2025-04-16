@@ -12,10 +12,16 @@ const MIN_GRID_SIZE = 1;
 const setGridSizeBtn = document.querySelector(".set-grid-size-btn");
 const resetColorsBtn = document.querySelector(".reset-colors-btn");
 
-// Set grid to initial size
-window.onload = () => {
+// Set initial grid side and check if user is in portrait mode
+window.addEventListener("DOMContentLoaded", () => {
+
+    // If user is on mobile disable scroll
+    if (isPortraitMode()) {
+        disableScroll();
+    }
+
     setGridSize(INITIAL_GRID_SIZE);
-};
+});
 
 // Generate squares (user given input)
 setGridSizeBtn.addEventListener("click", () => {
@@ -60,6 +66,14 @@ function generateRandomColor() {
 
 function removeAllContainers() {
     document.querySelectorAll(".container").forEach(container => container.remove());
+}
+
+function isPortraitMode() {
+    return window.innerHeight > window.innerWidth;
+}
+
+function disableScroll() {
+    document.body.style.overflow = "hidden";
 }
 
 function setGridSize(squaresPerSide) {
